@@ -1,0 +1,15 @@
+<?php
+/** @var \Perspective\Thema17ChangeDbScripts\Block\Template $block */
+$viewModel = $block->getData('view_model');
+
+$collection = $viewModel->getPostCollection();
+foreach($collection as $item){
+
+    echo "<pre>";
+    print_r($item->getData());
+    echo "<b>prefName</b> ".$item->prefName()."</br>";
+    echo "<b>shortUrl</b> ".$item->shortUrl();
+    echo "</pre>";
+    
+}
+?>
